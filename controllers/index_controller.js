@@ -27,8 +27,11 @@ index_controller = {
 	  console.log("url: " + url)
       console.log("topicId :" + topicId + " fileName: " + fileName)
 	  
-	  if(topicId == "")
-		 res.send("Topic id nul")
+	  if(topicId == ""){
+          res.send("Come back and enter the topic id (topic id nil)")
+          return
+      }
+		 
 	  if(fileName == "")
 		  fileName = "export"
 		  
@@ -46,7 +49,8 @@ index_controller = {
                 returnFile(req, res, next, sqliteFile)
             });
           }else{
-              res.send("Error")
+              removeFile(req, res, next, sqliteFile)
+              res.send("Cannot get data of this topic id (Error or internet is down)" + error)
           }
       })
   }
