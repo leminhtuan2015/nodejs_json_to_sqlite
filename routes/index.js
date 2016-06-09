@@ -7,7 +7,7 @@ module.exports = function(router){
     index_controller.index(req, res, next)
   });
     
-  router.get('export_data', function(req, res, next) {
-    index_controller.export(req, res, next)
+  router.get('/export_data', function(req, res, next) {
+    index_controller.export_data(req, res, next)
   });
 }
