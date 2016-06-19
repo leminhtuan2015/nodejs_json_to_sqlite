@@ -1,5 +1,5 @@
 var config = {}
 
-config.host = "http://127.0.0.1:8888/export"
+config.host = "https://api-dot-loxo-1051.appspot.com/export"
 
 module.exports = config
